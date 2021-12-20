@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#CardContainer {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid gray;
+  border-radius: 10px;
+  min-height: 10rem;
+  width: 30%;
+  background: white;
+}
+#Card span {
+  font-size: 2rem;
+}/*# sourceMappingURL=Main.css.map */
