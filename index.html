@@ -8,12 +8,21 @@
 		<title>Study Sino Korean Numbers</title>
 	</head>
 	<body>
-		<div id="CardContainer">
-			<div id="Card">
-				<span id="CardTextFront">5000</span>
+		<div id="Card">
+			<div id="InnerCard">
+				<div class="card-face card-face-front">
+					<span id="FrontText"></span>
+				</div>
+				<div class="card-face card-face-back">
+					<div class="card-content">
+						<div class="card-header">
+							<span id="BackText"></span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<button id="GenerateBtn">Generate New</button>
 		</div>
+		<button id="GenerateBtn">Generate New</button>
 		<script src="app.js"></script>
 	</body>
 </html>

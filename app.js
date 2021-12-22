@@ -11,6 +11,7 @@ function foldWay(num, fold) {
 
 function getSinoKorean() {
 	remainingNumber = Math.floor(Math.random() * (9999 - 1 + 1) + 1);
+	document.getElementById("BackText").innerText = remainingNumber;
 	console.log(remainingNumber);
 	return `${getThousands()}${getHundreds()}${getTens()}${
 		koreanSet[remainingNumber]
@@ -45,5 +46,12 @@ function getTens() {
 }
 
 document.getElementById("GenerateBtn").addEventListener("click", () => {
-	document.getElementById("CardTextFront").innerText = getSinoKorean();
+	document.getElementById("FrontText").innerText = getSinoKorean();
+});
+
+// const CardHTML = document.getElementById("Card");
+const CardHTML = document.getElementById("InnerCard");
+
+CardHTML.addEventListener("click", () => {
+	CardHTML.classList.toggle("is-flipped");
 });
