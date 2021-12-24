@@ -55,3 +55,8 @@ const CardHTML = document.getElementById("InnerCard");
 CardHTML.addEventListener("click", () => {
 	CardHTML.classList.toggle("is-flipped");
 });
+
+//Generate new card content on page load
+window.addEventListener("DOMContentLoaded", () => {
+	document.getElementById("FrontText").innerText = getSinoKorean();
+});
