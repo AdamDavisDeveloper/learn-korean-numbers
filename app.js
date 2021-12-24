@@ -1,9 +1,11 @@
+const CardHTML = document.getElementById("InnerCard");
+
 const koreanSet = ["", "일", "이", "삼", "사", "오", "룍", "칠", "팔", "구"];
 const koreanTen = "십";
 const koreanOneHundred = "백";
 const koreanOneThousand = "천";
 
-let remainingNumber;
+let remainingNumber; //inits as rand int 1-9999 - changes per 1000/100/10 factor
 
 function foldWay(num, fold) {
 	return Math.floor(num / fold);
@@ -12,7 +14,6 @@ function foldWay(num, fold) {
 function getSinoKorean() {
 	remainingNumber = Math.floor(Math.random() * (9999 - 1 + 1) + 1);
 	document.getElementById("BackText").innerText = remainingNumber;
-	console.log(remainingNumber);
 	return `${getThousands()}${getHundreds()}${getTens()}${
 		koreanSet[remainingNumber]
 	}`;
@@ -45,18 +46,16 @@ function getTens() {
 	} else return "";
 }
 
+//Generate new card content on page load
+window.addEventListener("DOMContentLoaded", () => {
+	document.getElementById("FrontText").innerText = getSinoKorean();
+});
+
 document.getElementById("GenerateBtn").addEventListener("click", () => {
 	document.getElementById("FrontText").innerText = getSinoKorean();
 });
 
-// const CardHTML = document.getElementById("Card");
-const CardHTML = document.getElementById("InnerCard");
-
+// Adds flipping class (rotate 180deg) on click
 CardHTML.addEventListener("click", () => {
 	CardHTML.classList.toggle("is-flipped");
-});
-
-//Generate new card content on page load
-window.addEventListener("DOMContentLoaded", () => {
-	document.getElementById("FrontText").innerText = getSinoKorean();
 });
