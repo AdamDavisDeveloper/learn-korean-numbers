@@ -155,6 +155,10 @@ a {
   border-bottom: 2px solid white;
 }
 
+.colorize {
+  color: black;
+}
+
 .octo-switch {
   width: auto;
   display: block;
