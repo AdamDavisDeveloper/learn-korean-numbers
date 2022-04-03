@@ -16,7 +16,7 @@
 	<body>
 		<div id="Settings">
 			<nav>
-				<h1>Korean Numbers Practice</h1>
+				<a href="/"><h1>Korean Numbers Practice</h1></a>
 				<ul>
 					<li>about</li>
 					<a href="/settings">settings</a>
@@ -27,7 +27,12 @@
 				<h1>Options</h1>
 
 				<div class="octo-switch">
-					<input type="checkbox" id="NumberSystemSwitch" tabindex="1" />
+					<input
+						checked="checkedLocal_System()"
+						type="checkbox"
+						id="NumberSystemSwitch"
+						tabindex="1"
+					/>
 					<div class="octo"></div>
 					<label id="NativeSino" for="NumberSystemSwitch" class="well"></label>
 					<span class="prompt">sino or native korean flashcards</span>
@@ -37,7 +42,7 @@
 					<input type="checkbox" id="ColorSwitch" tabindex="2" />
 					<div class="octo"></div>
 					<label for="ColorSwitch" class="well"></label>
-					<span class="prompt">color the 10s 100s 1000s</span>
+					<span class="prompt">color the sino 10s 100s 1000s</span>
 				</div>
 			</div>
 		</div>
