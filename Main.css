@@ -181,6 +181,7 @@ a {
 .octo-switch .prompt {
   display: inline-block;
   margin-top: 10px;
+  font-size: 1.1rem;
 }
 .octo-switch .well {
   background: white;
@@ -259,9 +260,9 @@ a {
   content: "No";
   position: absolute;
   color: #53adcb;
-  left: -30px;
+  left: -38px;
   top: 0px;
-  font-size: 16px;
+  font-size: 1.1rem;
 }
 .octo-switch #NumberSystemSwitch ~ label:after,
 .octo-switch #ColorSwitch ~ label:after {
@@ -270,7 +271,7 @@ a {
   color: #bbbbbb;
   left: 80px;
   top: 0px;
-  font-size: 16px;
+  font-size: 1.1rem;
 }
 .octo-switch #NumberSystemSwitch:checked ~ label:before,
 .octo-switch #ColorSwitch:checked ~ label:before {
@@ -285,9 +286,9 @@ a {
   content: "Sino";
   position: absolute;
   color: #53adcb;
-  left: -37px;
+  left: -45px;
   top: 0px;
-  font-size: 16px;
+  font-size: 1.1rem;
 }
 .octo-switch #NumberSystemSwitch ~ #NativeSino:after,
 .octo-switch #ColorSwitch ~ #NativeSino:after {
@@ -296,7 +297,7 @@ a {
   color: #bbbbbb;
   left: 80px;
   top: 0px;
-  font-size: 16px;
+  font-size: 1.1rem;
 }
 .octo-switch #NumberSystemSwitch:checked ~ #NativeSino:before,
 .octo-switch #ColorSwitch:checked ~ #NativeSino:before {
