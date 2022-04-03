@@ -40,8 +40,14 @@ a {
   text-decoration: none;
 }
 
+.reset-a-tag {
+  text-decoration: underline;
+  color: #b44152;
+}
+
 #MainContent,
-#Settings {
+#Settings,
+#About {
   background: linear-gradient(180deg, rgba(251, 219, 219, 0.79) 0%, rgba(251, 219, 219, 0.4503) 100%);
   margin: 1.5rem;
   min-height: 93vh;
@@ -141,7 +147,8 @@ a {
   height: 2rem;
 }
 
-#Options {
+#Options,
+#AboutText {
   display: block;
   width: 40%;
   margin: auto;
@@ -149,10 +156,16 @@ a {
   align-items: center;
   flex-direction: column;
 }
-#Options h1 {
+#Options h1,
+#AboutText h1 {
   padding: 0rem 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   border-bottom: 2px solid white;
+}
+
+#AboutText .text-block p {
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .colorize {
