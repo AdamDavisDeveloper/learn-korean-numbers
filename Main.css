@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +19,8 @@ nav {
 nav h1 {
   font-size: 2rem;
 }
-nav li {
+nav li,
+nav a {
   font-size: 1.5rem;
 }
 
@@ -33,11 +35,18 @@ li {
   list-style: none;
 }
 
-#MainContent {
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#MainContent,
+#Settings {
   background: linear-gradient(180deg, rgba(251, 219, 219, 0.79) 0%, rgba(251, 219, 219, 0.4503) 100%);
   margin: 1.5rem;
   min-height: 93vh;
   border-radius: 5px;
+  min-height: 100vh;
 }
 
 #Card {
@@ -131,6 +140,140 @@ li {
 }
 #GenerateBtn img {
   height: 2rem;
+}
+
+#Options {
+  display: block;
+  width: 40%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#Options h1 {
+  padding: 0rem 2rem;
+  margin-bottom: 4rem;
+  border-bottom: 2px solid white;
+}
+
+.octo-switch {
+  width: auto;
+  display: block;
+  position: relative;
+  margin: 30px 0px 20px 0px;
+}
+.octo-switch .prompt {
+  display: inline-block;
+  margin-top: 10px;
+}
+.octo-switch .well {
+  background: white;
+  height: 20px;
+  width: 65px;
+  position: absolute;
+  right: 50px;
+  top: 7px;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #a5d4e4;
+  cursor: pointer;
+}
+.octo-switch #toggle {
+  opacity: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  height: 29px;
+  width: 140px;
+  background: transparent;
+  position: absolute;
+  right: 0px;
+  top: 3px;
+  cursor: pointer;
+  z-index: 100;
+  color: tranparent;
+}
+.octo-switch #toggle:after {
+  content: "";
+  background-color: transparent;
+  height: 40px;
+  width: 80px;
+  position: absolute;
+  left: 30px;
+  top: -5px;
+}
+.octo-switch #toggle ~ div.octo:before {
+  content: "🐙";
+  position: absolute;
+  right: 80px;
+  top: -10px;
+  font-size: 45px;
+  z-index: 1;
+  color: #53adcb;
+  transition: all 0.25s ease-out;
+}
+.octo-switch #toggle:checked {
+  right: 0px;
+}
+.octo-switch #toggle:checked:after {
+  left: -80px;
+}
+.octo-switch #toggle:checked ~ div.octo:before {
+  content: "🐙";
+  top: -10px;
+  right: 41px;
+}
+.octo-switch #toggle:checked ~ div.visible {
+  opacity: 1;
+  max-height: 900px;
+  overflow: visible;
+}
+.octo-switch #toggle ~ label:before {
+  content: "No";
+  position: absolute;
+  color: #53adcb;
+  left: -30px;
+  top: 0px;
+  font-size: 16px;
+}
+.octo-switch #toggle ~ label:after {
+  content: "Yes";
+  position: absolute;
+  color: #bbbbbb;
+  left: 80px;
+  top: 0px;
+  font-size: 16px;
+}
+.octo-switch #toggle:checked ~ label:before {
+  color: #bbbbbb;
+}
+.octo-switch #toggle:checked ~ label:after {
+  color: #53adcb;
+}
+.octo-switch #toggle ~ #NativeSino:before {
+  content: "Sino";
+  position: absolute;
+  color: #53adcb;
+  left: -37px;
+  top: 0px;
+  font-size: 16px;
+}
+.octo-switch #toggle ~ #NativeSino:after {
+  content: "Native";
+  position: absolute;
+  color: #bbbbbb;
+  left: 80px;
+  top: 0px;
+  font-size: 16px;
+}
+.octo-switch #toggle:checked ~ #NativeSino:before {
+  color: #bbbbbb;
+}
+.octo-switch #toggle:checked ~ #NativeSino:after {
+  color: #53adcb;
 }
 
 @media screen and (max-width: 969px) {

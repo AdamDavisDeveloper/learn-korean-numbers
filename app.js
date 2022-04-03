@@ -46,6 +46,8 @@ function getTens() {
 	} else return "";
 }
 
+//App Settings
+
 //Generate new card content on page load
 window.addEventListener("DOMContentLoaded", () => {
 	document.getElementById("FrontText").innerText = getSinoKorean();
