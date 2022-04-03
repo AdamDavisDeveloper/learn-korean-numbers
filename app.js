@@ -48,6 +48,7 @@ function getTens() {
 
 //Generate new card content on page load
 window.addEventListener("DOMContentLoaded", () => {
+	if (localStorage.getItem("number_system")) console.log("true");
 	document.getElementById("FrontText").innerText = getSinoKorean();
 });
 

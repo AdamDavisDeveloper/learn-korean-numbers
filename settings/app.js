@@ -11,9 +11,16 @@ ColorSwitch.addEventListener("click", (e) => {
 });
 
 function checkedLocal_System() {
-	return localStorage.getItem("number_system") || false;
+	let checked = JSON.parse(localStorage.getItem("number_system"));
+	NumberSystemSwitch.checked = checked == true;
 }
 
 function checkedLocal_Color() {
-	return localStorage.getItem("colorize") || false;
+	let checked = JSON.parse(localStorage.getItem("colorize"));
+	ColorSwitch.checked = checked == true;
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+	checkedLocal_System();
+	checkedLocal_Color();
+});
