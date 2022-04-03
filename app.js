@@ -15,15 +15,15 @@
 const CardHTML = document.getElementById("InnerCard");
 let remainingNumber; //inits as rand int 1-9999 - changes per 1000/100/10 factor
 
+function foldWay(num, fold) {
+	return Math.floor(num / fold);
+}
+
 // ---------- Sino Korean Algorithm ------------- //
 const koreanSet = ["", "일", "이", "삼", "사", "오", "룍", "칠", "팔", "구"];
 const koreanTen = "십";
 const koreanOneHundred = "백";
 const koreanOneThousand = "천";
-
-function foldWay(num, fold) {
-	return Math.floor(num / fold);
-}
 
 function getSinoKorean() {
 	remainingNumber = Math.floor(Math.random() * (9999 - 1 + 1) + 1);
@@ -93,10 +93,10 @@ const nativeSet = [
 	"일곱",
 	"여덟",
 	"아홉",
-	"열",
 ];
 
 const nativeTens = {
+	10: "열",
 	20: "스물",
 	30: "서른",
 	40: "마흔",
@@ -108,13 +108,30 @@ const nativeTens = {
 };
 
 function getNativeKorean() {
-	remainingNumber = Math.floor(Math.random() * (9999 - 1 + 1) + 1);
+	let koreanNum = ``;
+	remainingNumber = Math.floor(Math.random() * (99 - 1 + 1) + 1);
+	document.getElementById("BackText").innerHTML = remainingNumber; //set numeric text
+	const tens = Object.keys(nativeTens).reverse();
+
+	//Logic
+	if (remainingNumber < 10) {
+		koreanNum += nativeSet[remainingNumber];
+		return koreanNum;
+	} else {
+		tens.forEach((ten) => {
+			if (foldWay(remainingNumber, ten)) {
+				remainingNumber = remainingNumber % ten;
+				koreanNum += nativeTens[ten];
+			}
+		});
+		return koreanNum + nativeSet[remainingNumber];
+	}
 }
 
 //Master Run Function
 function RunApp() {
 	if (JSON.parse(localStorage.getItem("number_system"))) {
-		console.log("Generate Native Nums Here!");
+		document.getElementById("FrontText").innerHTML = getNativeKorean();
 	} else {
 		document.getElementById("FrontText").innerHTML = getSinoKorean();
 		colorizer();
