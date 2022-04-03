@@ -178,7 +178,8 @@ a {
   border: 1px solid #a5d4e4;
   cursor: pointer;
 }
-.octo-switch #toggle {
+.octo-switch #NumberSystemSwitch,
+.octo-switch #ColorSwitch {
   opacity: 0;
   border: none;
   border-radius: 0;
@@ -196,7 +197,8 @@ a {
   z-index: 100;
   color: tranparent;
 }
-.octo-switch #toggle:after {
+.octo-switch #NumberSystemSwitch:after,
+.octo-switch #ColorSwitch:after {
   content: "";
   background-color: transparent;
   height: 40px;
@@ -205,7 +207,8 @@ a {
   left: 30px;
   top: -5px;
 }
-.octo-switch #toggle ~ div.octo:before {
+.octo-switch #NumberSystemSwitch ~ div.octo:before,
+.octo-switch #ColorSwitch ~ div.octo:before {
   content: "🐙";
   position: absolute;
   right: 80px;
@@ -215,23 +218,28 @@ a {
   color: #53adcb;
   transition: all 0.25s ease-out;
 }
-.octo-switch #toggle:checked {
+.octo-switch #NumberSystemSwitch:checked,
+.octo-switch #ColorSwitch:checked {
   right: 0px;
 }
-.octo-switch #toggle:checked:after {
+.octo-switch #NumberSystemSwitch:checked:after,
+.octo-switch #ColorSwitch:checked:after {
   left: -80px;
 }
-.octo-switch #toggle:checked ~ div.octo:before {
+.octo-switch #NumberSystemSwitch:checked ~ div.octo:before,
+.octo-switch #ColorSwitch:checked ~ div.octo:before {
   content: "🐙";
   top: -10px;
   right: 41px;
 }
-.octo-switch #toggle:checked ~ div.visible {
+.octo-switch #NumberSystemSwitch:checked ~ div.visible,
+.octo-switch #ColorSwitch:checked ~ div.visible {
   opacity: 1;
   max-height: 900px;
   overflow: visible;
 }
-.octo-switch #toggle ~ label:before {
+.octo-switch #NumberSystemSwitch ~ label:before,
+.octo-switch #ColorSwitch ~ label:before {
   content: "No";
   position: absolute;
   color: #53adcb;
@@ -239,7 +247,8 @@ a {
   top: 0px;
   font-size: 16px;
 }
-.octo-switch #toggle ~ label:after {
+.octo-switch #NumberSystemSwitch ~ label:after,
+.octo-switch #ColorSwitch ~ label:after {
   content: "Yes";
   position: absolute;
   color: #bbbbbb;
@@ -247,13 +256,16 @@ a {
   top: 0px;
   font-size: 16px;
 }
-.octo-switch #toggle:checked ~ label:before {
+.octo-switch #NumberSystemSwitch:checked ~ label:before,
+.octo-switch #ColorSwitch:checked ~ label:before {
   color: #bbbbbb;
 }
-.octo-switch #toggle:checked ~ label:after {
+.octo-switch #NumberSystemSwitch:checked ~ label:after,
+.octo-switch #ColorSwitch:checked ~ label:after {
   color: #53adcb;
 }
-.octo-switch #toggle ~ #NativeSino:before {
+.octo-switch #NumberSystemSwitch ~ #NativeSino:before,
+.octo-switch #ColorSwitch ~ #NativeSino:before {
   content: "Sino";
   position: absolute;
   color: #53adcb;
@@ -261,7 +273,8 @@ a {
   top: 0px;
   font-size: 16px;
 }
-.octo-switch #toggle ~ #NativeSino:after {
+.octo-switch #NumberSystemSwitch ~ #NativeSino:after,
+.octo-switch #ColorSwitch ~ #NativeSino:after {
   content: "Native";
   position: absolute;
   color: #bbbbbb;
@@ -269,10 +282,12 @@ a {
   top: 0px;
   font-size: 16px;
 }
-.octo-switch #toggle:checked ~ #NativeSino:before {
+.octo-switch #NumberSystemSwitch:checked ~ #NativeSino:before,
+.octo-switch #ColorSwitch:checked ~ #NativeSino:before {
   color: #bbbbbb;
 }
-.octo-switch #toggle:checked ~ #NativeSino:after {
+.octo-switch #NumberSystemSwitch:checked ~ #NativeSino:after,
+.octo-switch #ColorSwitch:checked ~ #NativeSino:after {
   color: #53adcb;
 }
 
