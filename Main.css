@@ -330,10 +330,21 @@ a {
   }
 }
 @media screen and (max-width: 622px) {
-  #MainContent {
+  #MainContent,
+#Settings,
+#About {
     margin: 0;
     padding-top: 2rem;
     min-height: 100vh;
+  }
+
+  #Options,
+#AboutText {
+    width: 90%;
+  }
+  #Options h1,
+#AboutText h1 {
+    padding-left: 0;
   }
 
   #Card {
@@ -348,6 +359,11 @@ a {
     margin-top: 0.5rem;
     width: 40%;
   }
+
+  .octo-switch .prompt {
+    max-width: 8.75rem;
+    margin-top: 0;
+  }
 }
 @media screen and (max-width: 500px) {
   nav ul {
@@ -355,6 +371,9 @@ a {
   }
 }
 @media screen and (max-width: 450px) {
+  nav {
+    padding: 2rem 0rem;
+  }
   nav ul {
     width: 60%;
   }
