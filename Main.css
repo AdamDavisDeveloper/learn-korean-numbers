@@ -28,7 +28,7 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 20%;
+  width: 30%;
 }
 
 li {
@@ -38,6 +38,11 @@ li {
 a {
   color: black;
   text-decoration: none;
+}
+
+span {
+  font-size: 1.5rem;
+  display: inline-block;
 }
 
 .reset-a-tag {
@@ -51,9 +56,14 @@ a {
   align-items: center;
 }
 
+.margin-bottom-spacer {
+  margin-bottom: 2rem;
+}
+
 #MainContent,
 #Settings,
-#About {
+#About,
+#Learn {
   background: linear-gradient(180deg, rgba(251, 219, 219, 0.79) 0%, rgba(251, 219, 219, 0.4503) 100%);
   margin: 1.5rem;
   min-height: 93vh;
@@ -154,7 +164,8 @@ a {
 }
 
 #Options,
-#AboutText {
+#AboutText,
+#LearnText {
   display: block;
   width: 40%;
   margin: auto;
@@ -163,13 +174,15 @@ a {
   flex-direction: column;
 }
 #Options h1,
-#AboutText h1 {
+#AboutText h1,
+#LearnText h1 {
   padding: 0rem 2rem;
   margin-bottom: 2rem;
   border-bottom: 2px solid white;
 }
 
-#AboutText .text-block p {
+#AboutText .text-block p,
+#LearnText .text-block p {
   padding-bottom: 1.5rem;
   font-size: 1.5rem;
 }
@@ -332,18 +345,21 @@ a {
 @media screen and (max-width: 622px) {
   #MainContent,
 #Settings,
-#About {
+#About,
+#Learn {
     margin: 0;
     padding-top: 2rem;
     min-height: 100vh;
   }
 
   #Options,
-#AboutText {
+#AboutText,
+#LearnText {
     width: 90%;
   }
   #Options h1,
-#AboutText h1 {
+#AboutText h1,
+#LearnText h1 {
     padding-left: 0;
   }
 
